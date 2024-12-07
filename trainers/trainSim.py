@@ -42,7 +42,8 @@ def train(model, train_loader, eval_loader, learning_rate, epochs=10, writer=Non
 
             if total % 100 == 0:
                 print(
-                    f"Epoch [{epoch+1}/{epochs}], "
+                    f"Epoch [{epoch+1}/{epochs}] "
+                    f"({total}/60000), "
                     f"CurrentLoss: {running_loss/total:.4f}, "
                     f"CurrentAccuracy: {100 * correct/total:.2f}%"
                 )
